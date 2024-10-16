@@ -8,11 +8,8 @@
 </head>
 <body>
 <h3>행운의 번호</h3>
-<span th:text="${numbers[0]}">7</span>
-<span th:text="${numbers[1]}">10</span>
-<span th:text="${numbers[2]}">22</span>
-<span th:text="${numbers[3]}">29</span>
-<span th:text="${numbers[4]}">31</span>
-<span th:text="${numbers[5]}">38</span>
+<th:block th:each="n : ${numbers}">
+  <span th:text="${n}">7</span>
+</th:block>
 </body>
 </html>
