@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html
+        lang="ko"
+        xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>로또</title>
 </head>
 <body>
 <h3>행운의 번호</h3>
-<span>7</span>
-<span>10</span>
-<span>22</span>
-<span>29</span>
-<span>31</span>
-<span>38</span>
+<span th:text="${numbers[0]}">7</span>
+<span th:text="${numbers[1]}">10</span>
+<span th:text="${numbers[2]}">22</span>
+<span th:text="${numbers[3]}">29</span>
+<span th:text="${numbers[4]}">31</span>
+<span th:text="${numbers[5]}">38</span>
 </body>
 </html>
