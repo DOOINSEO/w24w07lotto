@@ -4,12 +4,14 @@ import org.springframework.stereotype.Service
 import kotlin.random.Random
 @Service
 class LottoService {
-    fun GetLuckyNumbers() : Array<Int> {
-        val numbers = arrayOf(0, 0, 0, 0, 0, 0)
+    fun GetLuckyNumbers() : IntArray {
+        val numbers = mutableSetOf<Int>() //val => var로 바꿔야 됨
+                                      //다른 numbers 불러옴(주소가 다름)
 
-        for (i in numbers.indices)
-            numbers[i] = Random.nextInt(45) + 1
+        while (numbers.size < 6) {
+            numbers.add(Random.nextInt(1, 46))
+        }
 
-        return numbers
+        return numbers.toSortedSet().toIntArray()
     }
 }
